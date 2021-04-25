@@ -1,18 +1,18 @@
-<div id="detail-container">
+<div id="details-container">
   <div id="image-container">
     <img src="{{movie.image}}" alt="image">
   </div>
   <div id="description-container">
     <a href="/movies">Go back</a>
-    <h3>{{movie.title}}</h3>
-    <h4>Director: {{movie.director}}</h4>
-    <p>Stars</p>
-    <ul>
+    <h3 class="mb-20 font-12">{{movie.title}}</h3>
+    <h4 class="mb-20">Director: {{movie.director}}</h4>
+    <p class="mb-10 bold">Stars</p>
+    <ul class="mb-10" id="star-list">
       {{#each movie.stars}}
       <li>{{this}}</li>
       {{/each}}
     </ul>
-    <p>{{movie.description}}</p>
+    <p class="mb-10">{{movie.description}}</p>
     <ul id="showtime">
       {{#each movie.showtimes}}
       <li>{{this}} |</li>
